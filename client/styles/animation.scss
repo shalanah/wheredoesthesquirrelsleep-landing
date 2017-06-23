@@ -1,0 +1,19 @@
+.anim {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(15px);
+  transition-duration: 1s;
+}
+
+.anim-0 {
+  transition-delay: .25s;
+}
+
+.anim-1 {
+  transition-delay: .75s;
+}
+
+.loaded .anim {
+  opacity: 1;
+  transform: translateY(0)
+}

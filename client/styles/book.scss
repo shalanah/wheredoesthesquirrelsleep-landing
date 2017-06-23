@@ -1,0 +1,21 @@
+#book {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#book-container {
+  position: relative;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: 1s .25s;
+}
+
+.loaded #book-container {
+  opacity: 1;
+  transform: translateY(0)
+}
+
+img {
+  position: absolute;
+  filter: drop-shadow(0 0 40px rgba(255, 255, 255, .2));
+}

@@ -1,0 +1,22 @@
+button {
+  width: 100%;
+  padding: .5em;
+  color: #fff;
+  font-size: 1.7em;
+  background-color: #1977bc;
+  background-color: #4cb594;
+  border: 2px solid rgba(255, 255, 255, .2);
+  color: #fff;
+  transition: .2s;
+  text-shadow: 1px -1px 0 rgba(0, 0, 0, .2);
+  margin-bottom: 30px;
+}
+
+button:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #2588d1;
+  background-color: #55c09f;
+  transform: scale(1.015);
+  box-shadow: 0 5px 40px rgba(4, 53, 88, .5);
+}
