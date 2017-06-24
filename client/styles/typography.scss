@@ -6,12 +6,16 @@
 }
 
 .description {
-  margin-top: 30px;
+  font-size: 1em;
   margin-bottom: 40px;
 }
 
 .creators {
-  margin-bottom: 5px;
+  font-size: 1em;
+  margin-bottom: 30px;
+  &h2 {
+    margin-bottom: 5px;
+  }
 }
 
 .creators span {
@@ -27,4 +31,28 @@
 .title-l1 {
   font-size: 2vw;
   color: #7bc1a8;
+}
+
+@media (max-width: 1000px) {
+  .desktop-only {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .creators {
+    font-size: .8em;
+    &span {
+      font-size: .7em;
+    }
+  }
+}
+
+.vertical {
+  .title {
+    font-size: 8vw;
+  }
+  .title-l1 {
+    font-size: 4vw;
+  }
 }

@@ -17,12 +17,6 @@ main {
   position: absolute;
 }
 
-.col {
-  background-color: yellow;
-  height: 100px;
-  width: 100%;
-}
-
 .flex-container {
   height: 80%;
   width: 80%;
@@ -37,9 +31,26 @@ main {
   position: relative;
 }
 
+#book-container {
+  height: 100%;
+}
+
 .vert-center {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) translateZ(0);
+}
+
+.vertical {
+  #book-container {
+    height: 40%;
+  }
+  #info {
+    height: 60%;
+  }
+  .flex-item {
+    width: 100%;
+    padding: 15px;
+  }
 }

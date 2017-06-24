@@ -12,7 +12,7 @@ const getNightSkyDim = (canvas) => {
   }
 }
 
-const randomInt = (a, b) => ( Math.floor(Math.random() * (b - a + 1) + a) )
+const randomInt = (a, b) => (Math.floor(Math.random() * (b - a + 1) + a))
 
 const totalItemsInArea = ({
   width,
@@ -22,6 +22,8 @@ const totalItemsInArea = ({
   Math.round(width * height * density)
 )
 
+// Canvas twinkle stars inspired by:
+// http://giacomofurlan.name/my-experiments/starry-sky-canvas
 const twinkleStars = (canvas) => {
   /* Credits: http://www.html5canvastutorials.com/advanced/html5-canvas-animation-stage/ */
   window.requestAnimFrame = ((callback) => {
@@ -83,11 +85,11 @@ const twinkleStars = (canvas) => {
       let increase = item.increase !== undefined ? item.increase : randomInt(0, 1) === 1
       stars[i] = Object.assign(
         {},
-        drawCircle(item), 
+        drawCircle(item),
         getBlinkOpacityAndIncrease({opacity, increase, step, opacityMin, opacityMax})
       )
     }
-    requestAnimFrame(() => {
+    window.requestAnimFrame(() => {
       blink({percent, step, opacityMin, opacityMax})
     })
   }
@@ -102,7 +104,7 @@ const twinkleStars = (canvas) => {
           cx: randomInt(0, width),
           cy: randomInt(0, height),
           radius: Math.max(randomInt(0, 3), 1),
-          opacity: Math.max(Math.random(), .1)
+          opacity: Math.max(Math.random(), 0.1)
         })
       )
     }
@@ -118,8 +120,8 @@ const twinkleStars = (canvas) => {
     density: 3 / (100 * 100) // 3 per square 100px
   })
   blink({
-    percent: .75,
-    step: .027,
+    percent: 0.75,
+    step: 0.027,
     opacityMin: 0,
     opacityMax: 1
   })
@@ -129,7 +131,7 @@ const twinkleStars = (canvas) => {
     let {width: _winWidth, height: _winHeight} = getNightSkyDim(canvas)
 
     // Only redraw if we have to... if width or height is larger
-    if (_winWidth > winWidth || _winHeight > winHeight ) {
+    if (_winWidth > winWidth || _winHeight > winHeight) {
       winHeight = _winHeight
       winWidth = _winWidth
 
