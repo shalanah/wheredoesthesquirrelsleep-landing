@@ -26,7 +26,10 @@ module.exports = {
         test: /\.scss$/,
         use: extractSass.extract({
           use: [
-            {loader: "css-loader", options: {importLoaders: 2, url: false}},
+            {loader: "css-loader", options: {
+              url: false, // allow urls to stay same... for imgs
+              minimize: true
+            }},
             {loader: 'postcss-loader', options: {plugins: () => [autoprefixer]}},
             "sass-loader"
           ],
