@@ -42,6 +42,20 @@ main {
   transform: translate(-50%, -50%) translateZ(0);
 }
 
+.footer {
+  display: inline-block;
+}
+
+.publisher {
+  float: left;
+  margin-right: 10px;
+  line-height: 28px; // to line up with like btns
+}
+
+.fb-like-btns {
+  float: left;
+}
+
 .vertical {
   #book-container {
     height: 40%;

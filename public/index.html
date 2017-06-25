@@ -8,6 +8,19 @@
 <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
 
 <body>
+  <!-- FB like code -->
+  <div id="fb-root"></div>
+  <script>
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=1391003547825720";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <!-- Page -->
   <canvas id='bg'></canvas>
   <main>
     <div class="flex-container vert-center">
@@ -17,14 +30,29 @@
       <div class="flex-item" id="info">
         <h1 class='title anim'><span class="title-l1">Where does the</span><br>Squirrel Sleep?</h1>
         <div class='anim'>
-          <div class="creators"><h2><span>Written by</span> Grant Dawson</h2>
-          <h2><span>Illustrations by</span> Nathan Stromberg</h2>
+          <div class="creators">
+            <h2><span>Written by</span> Grant Dawson</h2>
+            <h2><span>Illustrations by</span> Nathan Stromberg</h2>
           </div>
           <p class='description desktop-only'>Nulla eget commodo magna. Fusce rhoncus tristique est sed aliquam. Mauris fringilla id sem eu faucibus. Donec erat ante, maximus sit amet nisl sed, tristique elementum magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla et leo turpis. Donec laoreet mi et nulla laoreet, eget fringilla augue commodo.</p>
           <div>
             <button>Buy now on Amazon.com</button>
           </div>
-          <p class="small">Published by <a>Red Pine Press</a></p>
+          <div class="small footer desktop-only">
+          <p class='publisher'>Published by <a>Red Pine Press</a></p>
+            <div class='fb-like-btns'>
+              <div
+                class="fb-like"
+                data-colorscheme="dark"
+                data-href="https://www.facebook.com/wheredoesthesquirrelsleep/"
+                data-layout="button"
+                data-action="like"
+                data-size="large"
+                data-show-faces="false"
+                data-share="true">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
