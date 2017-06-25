@@ -11,7 +11,7 @@
 
 .loaded #book-container {
   transform: translate(0, 0);
-  animation: fadeLeft both 1s .25s;
+  animation: fadeLeft both 1s;
 }
 
 .loaded.vertical #book-container {

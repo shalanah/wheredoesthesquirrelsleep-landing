@@ -1,8 +1,9 @@
+$bgTile: '../imgs/texture_bg.jpg';
 body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: #09518c; //url('./assets/texture_bg.jpg') repeat;
+  background: #09518c url('#{$bgTile}') repeat;
   letter-spacing: 0.03em;
   color: #fff;
   font-weight: normal;
@@ -17,15 +18,14 @@ main {
   position: absolute;
 }
 
-.flex-container {
+.container {
   height: 80%;
   width: 80%;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
 }
 
-.flex-item {
+.item {
+  float: left;
+  height: 100%;
   width: 50%;
   padding: 30px;
   position: relative;
@@ -63,7 +63,7 @@ main {
   #info {
     height: 60%;
   }
-  .flex-item {
+  .item {
     width: 100%;
     padding: 15px;
   }

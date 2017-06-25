@@ -26,7 +26,7 @@ module.exports = {
         test: /\.scss$/,
         use: extractSass.extract({
           use: [
-            {loader: "css-loader", options: {importLoaders: 2}},
+            {loader: "css-loader", options: {importLoaders: 2, url: false}},
             {loader: 'postcss-loader', options: {plugins: () => [autoprefixer]}},
             "sass-loader"
           ],
@@ -39,7 +39,10 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['env'],
-            plugins: [require('babel-plugin-transform-object-rest-spread')]
+            plugins: [
+              require('babel-plugin-transform-object-rest-spread'),
+              require('babel-plugin-transform-object-assign')
+            ]
           }
       }]
     }]
