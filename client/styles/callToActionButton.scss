@@ -1,4 +1,4 @@
-button {
+a.btn {
   width: 100%;
   padding: .5em;
   color: #fff;
@@ -11,9 +11,10 @@ button {
   text-shadow: 1px -1px 0 rgba(0, 0, 0, .2);
   margin-bottom: 30px;
   border-radius: .5em;
+  display: block;
 }
 
-button:hover {
+a.btn:hover {
   cursor: pointer;
   color: #fff;
   background-color: #2588d1;
