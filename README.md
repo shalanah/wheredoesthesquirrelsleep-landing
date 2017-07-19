@@ -1,6 +1,5 @@
-# Where does the Squirrel Sleep 
+# Where Does the Squirrel Sleep?
 ## Landing Page
 Created by Shalanah Dawson
-***
-WIP
-- See issues
+
+See online at [Where Does the Squirrel Sleep?](wheredoesthesquirrelsleep.com)
